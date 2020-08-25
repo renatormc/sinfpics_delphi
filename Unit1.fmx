@@ -1,0 +1,84 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 675
+  ClientWidth = 442
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Align = Bottom
+    Position.Y = 616.000000000000000000
+    Size.Width = 442.000000000000000000
+    Size.Height = 59.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Tirar foto'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Align = Bottom
+    Position.Y = 567.000000000000000000
+    Size.Width = 442.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Button2'
+    OnClick = Button2Click
+  end
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Top
+    Size.Width = 442.000000000000000000
+    Size.Height = 201.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TCustomizeItemObjects'
+    FooterAppearanceClassName = 'TCustomizeItemObjects'
+    Align = Client
+    Size.Width = 442.000000000000000000
+    Size.Height = 366.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    ItemAppearance.ItemHeight = 150
+    ItemAppearance.HeaderHeight = 1
+    ItemAppearance.FooterHeight = 1
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 185.000000000000000000
+        Appearance.Height = 44.000000000000000000
+        Appearance.PlaceOffset.X = 206.000000000000000000
+        Appearance.PlaceOffset.Y = 40.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Image2'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 191.000000000000000000
+        Appearance.Height = 150.000000000000000000
+        Appearance.PlaceOffset.X = -16.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+  end
+  object ActionList1: TActionList
+    Left = 120
+    Top = 56
+    object ActPhotoCamera: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      OnDidFinishTaking = ActPhotoCameraDidFinishTaking
+    end
+  end
+end
